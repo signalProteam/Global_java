@@ -49,7 +49,7 @@ public class HelpRequestService {
             );
 
             if (results != null && !results.isEmpty()) {
-                NominatimSearchResponseDTO location = results.getFirst();
+                var location = results.get(0);
 
                 help.setLatitude(Double.parseDouble(location.lat));
                 help.setLongitude(Double.parseDouble(location.lon));
